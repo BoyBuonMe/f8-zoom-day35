@@ -1,0 +1,82 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
+
+/* Wrapper */
+#root {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 320px;
+}
+
+/* Title */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Counter number */
+h2 {
+  font-size: 3rem;
+  margin: 20px 0;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  outline: none;
+  margin: 10px;
+  padding: 15px 22px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: #f2f5f9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.15),
+    -6px -6px 14px rgba(255, 255, 255, 0.9);
+}
+
+/* Active effect */
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.15),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* Specific colors */
+.decrease {
+  color: #e74c3c;
+}
+
+.reload {
+  color: #3498db;
+}
+
+.increase {
+  color: #27ae60;
+}

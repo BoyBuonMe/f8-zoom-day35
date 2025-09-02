@@ -1,0 +1,136 @@
+html {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+/* Container chính */
+.weather-container {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #74ebd5, #acb6e5); */
+}
+
+/* Card thời tiết */
+.weather-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Tiêu đề */
+.weather-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Dropdown chọn thành phố */
+.weather-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.weather-select:hover {
+  border-color: #007bff;
+}
+
+/* Thông tin thời tiết */
+.weather-info {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.weather-info span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Button làm mới */
+.weather-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.weather-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+/* Hiệu ứng fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Select box */
+.weather-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #f9f9f9;
+  outline: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none; /* Ẩn mũi tên mặc định */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}
+
+.weather-select:hover {
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+.weather-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Option trong dropdown */
+.weather-select option {
+  padding: 10px;
+  font-size: 15px;
+  background: #fff;
+  color: #333;
+}
+
+.weather-select option:checked {
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
