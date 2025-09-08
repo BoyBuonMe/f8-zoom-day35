@@ -3,17 +3,16 @@ html {
 }
 
 /* Container chính */
-.weather-container {
+.weatherContainer {
   font-family: "Segoe UI", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background: linear-gradient(135deg, #74ebd5, #acb6e5); */
 }
 
 /* Card thời tiết */
-.weather-card {
+.weatherCard {
   background: #ffffff;
   border-radius: 20px;
   padding: 25px;
@@ -24,7 +23,7 @@ html {
 }
 
 /* Tiêu đề */
-.weather-title {
+.weatherTitle {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -32,7 +31,7 @@ html {
 }
 
 /* Dropdown chọn thành phố */
-.weather-select {
+.weatherSelect {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -44,24 +43,24 @@ html {
   transition: all 0.3s ease;
 }
 
-.weather-select:hover {
+.weatherSelect:hover {
   border-color: #007bff;
 }
 
 /* Thông tin thời tiết */
-.weather-info {
+.weatherInfo {
   font-size: 16px;
   margin: 10px 0;
   color: #444;
 }
 
-.weather-info span {
+.weatherInfo span {
   font-weight: bold;
   color: #007bff;
 }
 
 /* Button làm mới */
-.weather-button {
+.weatherButton {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
@@ -75,7 +74,7 @@ html {
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.weather-button:hover {
+.weatherButton:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #00c6ff, #0072ff);
 }
@@ -93,7 +92,7 @@ html {
 }
 
 /* Select box */
-.weather-select {
+.weatherSelect {
   width: 100%;
   padding: 10px;
   border-radius: 12px;
@@ -111,25 +110,25 @@ html {
   background-size: 18px;
 }
 
-.weather-select:hover {
+.weatherSelect:hover {
   border-color: #007bff;
   background-color: #fff;
 }
 
-.weather-select:focus {
+.weatherSelect:focus {
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
 /* Option trong dropdown */
-.weather-select option {
+.weatherSelect option {
   padding: 10px;
   font-size: 15px;
   background: #fff;
   color: #333;
 }
 
-.weather-select option:checked {
+.weatherSelect option:checked {
   background: #007bff;
   color: #fff;
   font-weight: bold;

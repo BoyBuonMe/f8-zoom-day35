@@ -1,3 +1,6 @@
+import React from "react";
+import styles from "./Weather.module.scss";
+
 function Weather() {
   const weatherData = {
     hanoi: { city: "Hà Nội", temp: 28, weather: "Nắng", humidity: 65 },
@@ -14,7 +17,6 @@ function Weather() {
   }
 
   const handleChange = (e) => {
-    // e.preventDefault();
     setCity(e.target.value);
     setData(weatherData[e.target.value]);
   };
@@ -30,7 +32,6 @@ function Weather() {
     });
   };
 
-  // Hàm chọn icon dựa trên tình trạng
   const getWeatherIcon = (weather) => {
     const text = weather.toLowerCase();
     if (text.includes("mưa")) return "🌧️";
@@ -40,11 +41,15 @@ function Weather() {
   };
 
   return (
-    <div className="weather-container">
-      <div className="weather-card">
-        <h2 className="weather-title">🌍 Weather App</h2>
+    <div className={styles.weatherContainer}>
+      <div className={styles.weatherCard}>
+        <h2 className={styles.weatherTitle}>🌍 Weather App</h2>
 
-        <select className="weather-select" value={city} onChange={handleChange}>
+        <select
+          className={styles.weatherSelect}
+          value={city}
+          onChange={handleChange}
+        >
           {Object.keys(weatherData).map((key) => (
             <option key={key} value={key}>
               {weatherData[key].city}
@@ -52,17 +57,17 @@ function Weather() {
           ))}
         </select>
 
-        <p className="weather-info">
+        <p className={styles.weatherInfo}>
           🌡️ Nhiệt độ: <span>{data.temp}°C</span>
         </p>
-        <p className="weather-info">
+        <p className={styles.weatherInfo}>
           {getWeatherIcon(data.weather)} {data.weather}
         </p>
-        <p className="weather-info">
+        <p className={styles.weatherInfo}>
           💧 Độ ẩm: <span>{data.humidity}%</span>
         </p>
 
-        <button className="weather-button" onClick={handleRefresh}>
+        <button className={styles.weatherButton} onClick={handleRefresh}>
           🔄 Làm mới
         </button>
       </div>
@@ -70,14 +75,4 @@ function Weather() {
   );
 }
 
-const inner = (
-  <>
-    <>
-      {/* <h1>Weather App</h1> */}
-      <Weather />
-    </>
-  </>
-);
-
-const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(inner);
+export default Weather;

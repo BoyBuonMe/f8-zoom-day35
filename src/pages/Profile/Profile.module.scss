@@ -10,7 +10,7 @@ body {
 }
 
 /* Header title */
-.page-title {
+.pageTitle {
   margin: 30px 0 20px;
   font-size: 2rem;
   color: #fff;
@@ -20,7 +20,7 @@ body {
 }
 
 /* User card */
-.user-card {
+.userCard {
   background: #fff;
   width: 360px;
   padding: 25px 30px;
@@ -30,13 +30,13 @@ body {
 }
 
 /* Hover effect */
-.user-card:hover {
+.userCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Name */
-.user-card h2 {
+.userCard h2 {
   margin-bottom: 15px;
   font-size: 1.4rem;
   color: #2c3e50;
@@ -45,25 +45,25 @@ body {
 }
 
 /* Paragraphs */
-.user-card p {
+.userCard p {
   margin: 10px 0;
   font-size: 0.95rem;
   color: #555;
 }
 
 /* Strong label */
-.user-card strong {
+.userCard strong {
   color: #2c3e50;
 }
 
 /* Website link */
-.user-card a {
+.userCard a {
   color: #3498db;
   text-decoration: none;
   font-weight: 500;
 }
 
-.user-card a:hover {
+.userCard a:hover {
   text-decoration: underline;
 }
 

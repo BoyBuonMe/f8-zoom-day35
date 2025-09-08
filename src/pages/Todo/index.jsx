@@ -1,3 +1,6 @@
+import React from "react";
+import styles from "./Todo.module.scss";
+
 const TodoApp = () => {
   const [value, setValue] = React.useState("");
   const [todos, setTodos] = React.useState([]);
@@ -17,10 +20,10 @@ const TodoApp = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="todo-app">
-          <div className="todo-header">
-            <form onSubmit={handleSubmit} className="add-todo-form">
+      <div className={styles.container}>
+        <div className={styles.todoApp}>
+          <div className={styles.todoHeader}>
+            <form onSubmit={handleSubmit} className={styles.addTodoForm}>
               <input
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
@@ -28,35 +31,37 @@ const TodoApp = () => {
                 id="todoInput"
                 placeholder="Thêm công việc mới..."
               />
-              <button className="add-btn">
+              <button className={styles.addBtn}>
                 <span>+</span>
                 Thêm
               </button>
             </form>
           </div>
 
-          <div className="todo-list-container">
-            <div className="todo-list">
+          <div className={styles.todoListContainer}>
+            <div className={styles.todoList}>
               {todos.map((todo, index) => (
-                <div key={index} className={`todo-item `}>
-                  <p className={`${todo.completed ? "completed" : ""}`}>
+                <div key={index} className={styles.todoItem}>
+                  <p
+                    className={`${todo.completed ? `${styles.completed}` : ""}`}
+                  >
                     {todo.text}
                   </p>
-                  <div className="todo-controls">
+                  <div className={styles.todoControls}>
                     <button
                       onClick={() =>
                         setTodos((prevTodos) =>
                           prevTodos.filter((_, i) => i !== index)
                         )
                       }
-                      className="delete-btn"
+                      className={styles.deleteBtn}
                     >
                       Xoá
                     </button>
                     <button
                       className={`${
-                        todo.completed ? "completed" : ""
-                      } complete-btn`}
+                        todo.completed ? `${styles.completed}` : ""
+                      } ${styles.completeBtn}`}
                       onClick={() =>
                         setTodos((prevTodos) =>
                           prevTodos.map((todo, i) =>
@@ -75,37 +80,39 @@ const TodoApp = () => {
             </div>
 
             {todos.length === 0 && (
-              <div className="empty-state">
+              <div className={styles.emptyState}>
                 <h3>Chưa có công việc nào</h3>
                 <p>Hãy thêm công việc đầu tiên của bạn!</p>
               </div>
             )}
           </div>
 
-          <div className="todo-tasks">
-            <div className="tasks-grid">
-              <div className="task-card">
-                <div className="task-info">
-                  <span className="task-number" id="totalTodos">
+          <div className={styles.todoTasks}>
+            <div className={styles.tasksGrid}>
+              <div className={styles.taskCard}>
+                <div className={styles.taskInfo}>
+                  <span className={styles.taskNumber} id="totalTodos">
                     {totalCount}
                   </span>
-                  <span className="task-label">Tổng công việc</span>
+                  <span className={styles.taskLabel}>Tổng công việc</span>
                 </div>
               </div>
 
-              <div className="task-card">
-                <div className="task-info">
-                  <span className="task-number">{completedCount}</span>
-                  <span className="task-label">Số công việc đã hoàn thành</span>
+              <div className={styles.taskCard}>
+                <div className={styles.taskInfo}>
+                  <span className={styles.taskNumber}>{completedCount}</span>
+                  <span className={styles.taskLabel}>
+                    Số công việc đã hoàn thành
+                  </span>
                 </div>
               </div>
 
-              <div className="task-card">
-                <div className="task-info">
-                  <span className="task-number" id="totalTodos">
+              <div className={styles.taskCard}>
+                <div className={styles.taskInfo}>
+                  <span className={styles.taskNumber} id="totalTodos">
                     {totalCount - completedCount}
                   </span>
-                  <span className="task-label">Còn lại</span>
+                  <span className={styles.taskLabel}>Còn lại</span>
                 </div>
               </div>
             </div>
@@ -116,9 +123,4 @@ const TodoApp = () => {
   );
 };
 
-const inner = <>
-    <TodoApp />
-</>
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(inner);
+export default TodoApp;

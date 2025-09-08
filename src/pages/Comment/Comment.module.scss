@@ -1,4 +1,4 @@
-.comment-form {
+.commentForm {
   max-width: 450px;
   margin: 40px auto;
   background: #ffffff;
@@ -8,26 +8,26 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-.comment-form h2 {
+.commentForm h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
-.comment-form form {
+.commentForm form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.comment-form label {
+.commentForm label {
   font-weight: 500;
   margin-bottom: 10px;
   color: #555;
 }
 
-.comment-form input,
-.comment-form textarea {
+.commentForm input,
+.commentForm textarea {
   width: 450px;
   padding: 12px;
   margin-top: 5px;
@@ -38,19 +38,19 @@
   font-size: 14px;
 }
 
-.comment-form input:focus,
-.comment-form textarea:focus {
+.commentForm input:focus,
+.commentForm textarea:focus {
   border-color: #4a90e2;
   box-shadow: 0px 0px 5px rgba(74, 144, 226, 0.4);
   outline: none;
 }
 
-.comment-form textarea {
+.commentForm textarea {
   resize: none;
   min-height: 100px;
 }
 
-.comment-form button {
+.commentForm button {
   background: #4a90e2;
   color: white;
   padding: 12px;
@@ -61,23 +61,23 @@
   transition: background 0.3s ease;
 }
 
-.comment-form button:hover {
+.commentForm button:hover {
   background: #357ab8;
 }
 
 /* ============= List Comments =============== */
-.comment-list {
+.commentList {
   max-width: 700px;
   margin: 40px auto;
   font-family: "Segoe UI", sans-serif;
 }
 
-.comment-list h2 {
+.commentList h2 {
   margin-bottom: 20px;
   color: #333;
 }
 
-.comment-card {
+.commentCard {
   display: flex;
   gap: 15px;
   background: #fff;
@@ -88,7 +88,7 @@
   transition: transform 0.2s ease;
 }
 
-.comment-card:hover {
+.commentCard:hover {
   transform: translateY(-3px);
 }
 
@@ -98,34 +98,34 @@
   border-radius: 50%;
 }
 
-.comment-content {
+.commentContent {
   flex: 1;
 }
 
-.comment-header {
+.commentHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.comment-name {
+.commentName {
   font-weight: 600;
   color: #222;
 }
 
-.comment-time {
+.commentTime {
   font-size: 13px;
   color: #888;
 }
 
-.comment-email {
+.commentEmail {
   font-size: 13px;
   color: #555;
   display: block;
   margin: 3px 0 8px;
 }
 
-.comment-body {
+.commentBody {
   font-size: 15px;
   color: #333;
   line-height: 1.4;

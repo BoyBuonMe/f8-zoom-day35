@@ -1,3 +1,6 @@
+import React from "react";
+import styles from "./Profile.module.scss";
+
 function Profile() {
   const [user, setUser] = React.useState({});
   const [loading, setLoading] = React.useState(true);
@@ -6,7 +9,7 @@ function Profile() {
     fetch("https://jsonplaceholder.typicode.com/users/1")
       .then((res) => res.json())
       .then((user) => {
-        console.log(user);
+        // console.log(user);
         setUser(user);
       })
       .finally(() => {
@@ -16,11 +19,11 @@ function Profile() {
 
   return (
     <>
-      <h1 className="page-title">Profile Card</h1>
+      <h1 className={styles.pageTitle}>Profile Card</h1>
       {loading ? (
-        <div className="loading">Loading</div>
+        <div className={styles.loading}>Loading</div>
       ) : (
-        <div className="user-card">
+        <div className={styles.userCard}>
           <h2>{user.name}</h2>
           <p>
             <strong>Username:</strong> {user.username}
@@ -51,11 +54,4 @@ function Profile() {
   );
 }
 
-const inner = (
-  <>
-    <Profile />
-  </>
-);
-
-const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(inner);
+export default Profile;

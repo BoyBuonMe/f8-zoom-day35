@@ -1,3 +1,7 @@
+import React from "react";
+import styles from "./Comment.module.scss";
+import NAVBAR_HEIGHT from "../../components/Navigation";
+
 function InputForm() {
   const [comments, setComments] = React.useState([]);
   const [formData, setFormData] = React.useState({
@@ -45,8 +49,8 @@ function InputForm() {
   };
 
   return (
-    <>
-      <div className="comment-form">
+    <div style={{height: "100vh", paddingTop: NAVBAR_HEIGHT}}>
+      <div className={styles.commentForm}>
         <h2>Thêm Bình Luận Mới</h2>
         <form onSubmit={handleSubmit}>
           <label>
@@ -85,10 +89,10 @@ function InputForm() {
         </form>
       </div>
 
-      <div className="comment-list">
+      <div className={styles.commentList}>
         {comments.map((comment) => {
           return (
-            <div className="comment-card" key={comment.id}>
+            <div className={styles.commentCard} key={comment.id}>
               <img
                 className="avatar"
                 src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
@@ -96,29 +100,22 @@ function InputForm() {
                 )}&background=random`}
                 alt={comment.name}
               />
-              <div className="comment-content">
-                <div className="comment-header">
-                  <span className="comment-name">{comment.name}</span>
-                  <span className="comment-time">
+              <div className={styles.commentContent}>
+                <div className={styles.commentHeader}>
+                  <span className={styles.commentName}>{comment.name}</span>
+                  <span className={styles.commentTime}>
                     {fakeTimes[Math.floor(Math.random() * fakeTimes.length)]}
                   </span>
                 </div>
-                <span className="comment-email">{comment.email}</span>
-                <p className="comment-body">{comment.body}</p>
+                <span className={styles.commentEmail}>{comment.email}</span>
+                <p className={styles.commentBody}>{comment.body}</p>
               </div>
             </div>
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 
-const inner = (
-  <>
-    <InputForm />
-  </>
-);
-
-const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(inner);
+export default InputForm;
