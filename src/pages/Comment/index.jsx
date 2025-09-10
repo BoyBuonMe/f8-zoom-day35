@@ -15,7 +15,7 @@ function InputForm() {
       .then((res) => res.json())
       .then((comments) => {
         setComments(comments);
-        console.log(comments);
+        // console.log(comments);
       });
   }, []);
 
@@ -49,7 +49,7 @@ function InputForm() {
   };
 
   return (
-    <div style={{height: "100vh", paddingTop: NAVBAR_HEIGHT}}>
+    <div style={{height: "100vh", paddingTop: "56px"}}>
       <div className={styles.commentForm}>
         <h2>Thêm Bình Luận Mới</h2>
         <form onSubmit={handleSubmit}>

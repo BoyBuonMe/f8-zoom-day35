@@ -12,6 +12,7 @@ export default function Navigation() {
     { path: "/products", title: "Products" },
     { path: "/comments", title: "Comments" },
     { path: "/weather", title: "Weather" },
+    { path: "/buttons", title: "Buttons"},
   ];
 
   const navStyle = {
